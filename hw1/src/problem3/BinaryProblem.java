@@ -34,6 +34,8 @@ public class BinaryProblem {
     }
     if (value < 0) {
       bitString = "1" + bitString.substring(1);
+    } else if (bitString.charAt(0) == '1') {
+      bitString = "0000" + bitString;
     }
 
     return bitString;
