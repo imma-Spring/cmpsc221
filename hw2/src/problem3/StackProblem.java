@@ -21,7 +21,7 @@ public class StackProblem {
     String input;
     Stack<Character> inputStack = new Stack<>();
     do {
-      System.out.print("Input a char: ");
+      System.out.print("Input a char (or '0' to stop): ");
       input = scanner.next();
       if (!input.isEmpty()) {
         char c = input.charAt(0);
@@ -37,6 +37,7 @@ public class StackProblem {
     if (inputStack.size() <= 1) {
       String word = stackToString(inputStack);
       System.out.printf("\"%s\" is a palindrome\n", word);
+      System.exit(0);
     }
 
     Stack<Character> copyStack = new Stack<>();
